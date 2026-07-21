@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { tap } from 'rxjs';
 import { StarWarsApi } from '../../../core/services/star-wars-api';
 import { Character } from '../../../core/models/character';
@@ -9,7 +9,7 @@ import { Character } from '../../../core/models/character';
   templateUrl: './character-card.html',
   styleUrl: './character-card.css',
 })
-export class CharacterCard implemengts OnInit{
+export class CharacterCard implements OnInit{
   private starWarsApi = inject(StarWarsApi);
 
   public character: Character|undefined;
