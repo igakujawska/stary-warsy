@@ -6,4 +6,8 @@ export class StarWarsApi {
   
     private http = inject(HttpClient);
 
+    onGetData(){
+       return this.http.get(`${SW_API}people/1`);
+    }
+
 }
