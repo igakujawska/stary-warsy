@@ -1,2 +1,22 @@
-<button click="onGetData()">Pobierz dane</button>
-<div> Character: </div>
+<h1> Karta postaci </h1>
+<button (click) = "onGetData()">Pobierz dane</button>
+<div> Imię: {{ character?.name }} </div>
+<div> Wysokość: {{ character?.height }} </div>
+<div> Kolor włosów: {{ character?.hair_color }} </div>
+<div> Rok urodzenia: {{ character?.birth_year }} </div>
+<div> Płeć: {{ character?.gender }} </div>
+<ul> 
+    @for (film of character?.films; track $index) {
+        <li> {{ film }} </li>
+    }
+</ul>
+<ul>
+    @for (vehicle of character?.vehicles; track $index) {
+        <li> {{ vehicle }} </li>
+    }
+</ul>
+<ul> 
+    @for (starship of character?.starships; track $index) {
+        <li> {{ starship }} </li>
+    }
+</ul>
