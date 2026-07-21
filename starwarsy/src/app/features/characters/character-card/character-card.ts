@@ -1,5 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { tap } from 'rxjs';
+import{StarWarsApi} from '../../../core/services'
 
 @Component({
   selector: 'app-character-card',
@@ -8,12 +9,12 @@ import { tap } from 'rxjs';
   styleUrl: './character-card.css',
 })
 export class CharacterCard {
-  private starWarsApi = inject(StarWarsApi);
+  private starWarsApi = inject(this.StarWarsApi);
 
-  onGetData(): void{
+  onGetData(): void {
     this.starWarsApi.onGetCharacter().pipe(
       tap(character => {console.log(character)
-        
+
       })
     ).subscribe()
 }
