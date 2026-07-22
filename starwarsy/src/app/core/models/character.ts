@@ -8,3 +8,16 @@ export interface Character {
     vehicles: string[];
     starships: string[];
 }
+export type Pokemon {
+    name: string;
+    height: string;
+    weight: number;
+    type: string;
+}
+
+export interface PokemonList {
+    result: {
+        name: string;
+        url: string;        
+    }
+}

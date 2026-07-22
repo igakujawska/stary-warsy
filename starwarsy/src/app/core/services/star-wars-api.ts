@@ -13,3 +13,4 @@ export class StarWarsApi {
        return this.http.get<Character>(`${SW_API}people/1`);
     }
 }
+
