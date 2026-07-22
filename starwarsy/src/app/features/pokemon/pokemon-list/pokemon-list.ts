@@ -5,7 +5,7 @@ import { tap } from 'rxjs';
 
 @Component({
   selector: 'app-pokemon-list',
-  imports: [PokemonCard], [NgIf, NgFor],
+  imports: [PokemonCard]
   templateUrl: './pokemon-list.html',
   styleUrl: './pokemon-list.css',
 })
