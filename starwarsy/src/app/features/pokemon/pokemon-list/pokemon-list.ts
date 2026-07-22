@@ -19,6 +19,7 @@ export class PokemonList implements OnInit{
     this.pokemonApi.onGetPokemonList().pipe(
       tap((data: PokemonListDTO) => {
         this.pokemons = data;
+        console.log(data);
       })
     ).subscribe();
 }

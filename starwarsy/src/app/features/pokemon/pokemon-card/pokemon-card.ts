@@ -10,7 +10,7 @@ import { PokemonGallery } from '../../../core/services/pokemon-gallery';
 export class PokemonCard implements OnInit{
   private pokemonGallery = inject(PokemonGallery);
   name = input<string>('');
-  imgUrl: string = '';
+  imgUrl= '';
 
   ngOnInit(): void {
     this.imgUrl = this.pokemonGallery.onGenerateLinkBasedName(this.name());

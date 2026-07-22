@@ -1,5 +1,5 @@
 import { inject, Service } from '@angular/core';
-import { map, Observable } from 'rxjs';
+import { Observable } from 'rxjs';
 import { Pokemon, PokemonListDTO } from '../models/character';
 import { HttpClient } from '@angular/common/http';
 
