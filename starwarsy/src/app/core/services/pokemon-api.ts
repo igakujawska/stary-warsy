@@ -1,6 +1,7 @@
 import { inject, Service } from '@angular/core';
 import { map, Observable } from 'rxjs';
-import { Pokemon } from '../models/character';
+import { Pokemon, PokemonListDTO } from '../models/character';
+import { HttpClient } from '@angular/common/http';
 
 const PG_API = 'https://pokeapi.co/api/v2/';
 
@@ -11,7 +12,7 @@ export class PokemonApi {
        return this.http.get<Pokemon>(`${PG_API}pokemon/${index}`);
     }
 
-    onGetPokemonList(): Observable<PokemonList> {
-        return this.http.get<PokemonList>(`${PG_API}pokemon?limit=20&offset=0`);
+    onGetPokemonList(): Observable<PokemonListDTO> {
+        return this.http.get<PokemonListDTO>(`${PG_API}pokemon?limit=20&offset=0`);
     }
 }

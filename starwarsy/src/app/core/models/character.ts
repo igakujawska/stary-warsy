@@ -14,8 +14,8 @@ export type Pokemon = {
     weight: number;
 }
 
-export interface PokemonList {
-    result: {
+export interface PokemonListDTO {
+    results: {
         name: string;
         url: string;        
     }[];

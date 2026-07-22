@@ -13,6 +13,6 @@ export class PokemonCard implements OnInit{
   imgUrl: string = '';
 
   ngOnInit(): void {
-    this.imgUrl = this.pokemonGallery.onGenerateLinkBasedName(this.name);
+    this.imgUrl = this.pokemonGallery.onGenerateLinkBasedName(this.name());
 }
 }
