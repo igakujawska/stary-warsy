@@ -1,4 +1,6 @@
-import { Service } from '@angular/core';
+import { inject, Service } from '@angular/core';
+import { map, Observable } from 'rxjs';
+import { Pokemon } from '../models/character';
 
 const PG_API = 'https://pokeapi.co/api/v2/';
 

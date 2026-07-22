@@ -18,5 +18,5 @@ export interface PokemonList {
     result: {
         name: string;
         url: string;        
-    }
+    }[];
 }

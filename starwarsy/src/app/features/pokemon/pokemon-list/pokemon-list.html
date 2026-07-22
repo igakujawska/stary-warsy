@@ -1,1 +1,5 @@
-<p>pokemon-list works!</p>
+@if(pokemons){
+    @for (pokemon of pokemons; track $index){
+        <app-pokemon-card [name]="pokemon.name"></app-pokemon-card>
+    }
+}
